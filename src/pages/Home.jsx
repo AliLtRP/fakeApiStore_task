@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { addToCart } from "./Products";
 
+
 function Home() {
   const [products, setProducts] = useState([]);
 
@@ -10,7 +11,6 @@ function Home() {
       .get("https://fakestoreapi.com/products/")
       .then((response) => {
         setProducts(response.data);
-        console.log(response);
       })
       .catch((error) => {
         console.log(error);

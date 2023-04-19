@@ -3,14 +3,16 @@ import { arr } from "./Products";
 function Cart() {
   return (
     <>
-      <div>
+      <div className="cart">
         {arr.map((product) => (
-          <div className="product" key={product.id}>
-            <div>{product.title}</div>
-            <div className="img">
+          <div className="cartDisplay" key={product.id}>
+            <div className="">
               <img src={product.image} alt="" />
             </div>
-            <p>{product.price}</p>
+            <div style={{padding: '10px'}}>
+              <div>{product.title}</div>
+              <p>{product.price}</p>
+            </div>
           </div>
         ))}
       </div>

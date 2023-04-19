@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+
 export const arr = [];
 
 export const addToCart = (e, id) => {
